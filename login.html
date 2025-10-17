@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life of Oil — Вход в админку</title>
+  <style>
+    :root{
+      --bg:#f4f6f8;
+      --panel:#ffffff;
+      --accent:#0b63c6;
+      --muted:#6b7280;
+      --header:#1f2937;
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+    body{margin:0;background:var(--bg);display:flex;justify-content:center;align-items:center;height:100vh;}
+    .login-panel{background:var(--panel);padding:32px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.1);width:320px;}
+    h1{margin-top:0;color:var(--accent);font-size:22px;text-align:center;}
+    label{display:block;margin:12px 0 4px;color:var(--header);font-size:14px;}
+    input[type="text"], input[type="password"]{width:100%;padding:10px;border-radius:6px;border:1px solid #cbd5e1;margin-bottom:12px;}
+    button{width:100%;padding:10px;border-radius:6px;border:none;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;}
+    button:hover{background:#094a99;}
+    .hint{text-align:center;color:var(--muted);font-size:12px;margin-top:12px;}
+  </style>
+</head>
+<body>
+  <div class="login-panel">
+    <h1>Вход в админку</h1>
+    <label for="username">Имя пользователя</label>
+    <input type="text" id="username" placeholder="Введите имя">
+    <label for="password">Пароль</label>
+    <input type="password" id="password" placeholder="Введите пароль">
+    <button id="loginBtn">Войти</button>
+    <div class="hint">Для сотрудников Life of Oil</div>
+  </div>
+
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', function(){
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+
+      // Простой "корпоративный" логин (чисто фронтенд)
+      if(user === 'admin' && pass === 'oil200'){
+        alert('Доступ разрешён');
+        window.location.href = 'admin.html'; // Переход в админку
+      } else {
+        alert('Неверное имя пользователя или пароль');
+      }
+    });
+  </script>
+</body>
+</html>

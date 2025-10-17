@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Life of Oil — Home</title>
+  <meta name="description" content="Life of Oil — переработка нефти, логистика и разработки." />
+  <style>
+    /* Простой корпоративный стиль */
+    :root{
+      --bg:#ffffff;
+      --accent:#0b63c6;
+      --muted:#6b7280;
+      --card:#f7f9fc;
+      --mono: "Courier New", monospace;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{margin:0;height:100%;background:var(--bg);color:#0b1220}
+    header{border-bottom:1px solid #edf2f7;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:46px;height:46px;border-radius:6px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(180deg,var(--accent),#0a4ea0);
+      color:#fff;font-weight:700;font-family:var(--mono)
+    }
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-size:14px}
+    main{max-width:980px;margin:28px auto;padding:0 20px}
+    .hero{background:var(--card);padding:22px;border-radius:10px;box-shadow:0 6px 20px rgba(12,38,75,0.04)}
+    h1{margin:0;color:var(--accent);font-size:22px}
+    p.lead{color:var(--muted);margin:10px 0 0 0}
+    .grid{display:grid;grid-template-columns:1fr 300px;gap:20px;margin-top:18px}
+    .card{background:var(--card);padding:14px;border-radius:8px}
+    footer{border-top:1px solid #f1f5f9;padding:18px 24px;text-align:center;color:var(--muted);font-size:13px;margin-top:24px}
+
+    /* Облегчаем обнаружение /admin: внизу показываем простой текст "/admin" небольшим серым шрифтом */
+    .secret-hint{
+      margin-top:12px;font-size:12px;color:#a1a1aa;
+      text-align:right;
+    }
+    .secret-hint a{color:#9ca3ff;text-decoration:none;font-family:var(--mono);font-size:12px}
+
+    /* Mobile */
+    @media (max-width:900px){ .grid{grid-template-columns:1fr; } .secret-hint{text-align:center} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">LO</div>
+      <div>
+        <div style="font-weight:700">Life of Oil</div>
+        <div style="font-size:13px;color:var(--muted)">Переработка, логистика, технологические решения</div>
+      </div>
+    </div>
+
+    <nav aria-label="Главное меню">
+      <a href="#">О компании</a>
+      <a href="#">Услуги</a>
+      <a href="#">Партнёрам</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Качественная переработка и надёжность</h1>
+      <p class="lead">Life of Oil — региональный оператор по сбору и переработке углеводородов. Мы инвестируем в модернизацию промышленных процессов и цифровую автоматизацию.</p>
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">
+        В партнерстве с технологическими подрядчиками внедрили ряд автоматизированных систем оптимизации производственных рецептур.
+      </div>
+    </section>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h3 style="margin:0 0 8px 0;color:var(--accent)">Наши услуги</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>Переработка сырой нефти</li>
+            <li>Транспортировка и логистика</li>
+            <li>Аналитика производства</li>
+            <li>Технологическая интеграция</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3 style="margin:0 0 8px 0;color:var(--accent)">Новости</h3>
+          <div style="color:var(--muted);font-size:13px">
+            2000-07-03 — Завершен пилот автоматизации на РП-2.<br>
+            2013-12-25 — Пожар на РП-2.<br>
+            2019-01-12 — Обновление производственных рецептур.<br>
+            <div style="margin-top:8px;color:#9aa0b3;font-size:12px">(Полные архивы доступны партнёрам.)</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <strong>Контакты</strong>
+          <div style="margin-top:8px;color:var(--muted);font-size:13px">
+            E: info@lifeofoil.krs<br>
+            T: +999 45 200 000 <br>
+            Адрес: Алое Плато, портовый комплекс
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px;font-size:13px;color:var(--muted)">
+          Партнёрские проекты:<br>
+          Sever Innovators — технологическая интеграция и автоматизация.
+        </div>
+      </aside>
+    </div>
+
+    <div class="secret-hint" aria-hidden="true">
+      <!-- Видимая и незатейливая подсказка: корневой путь /admin -->
+      <span>Для админов (не забудьте снова): <a href="/login.html">/admin</a></span>
+    </div>
+  </main>
+
+  <footer>
+    © 1995—2022 Life of Oil • Красностан
+Все права соблюдены. Некоторая информация может быть недоступна.
+    <div style="margin-top:6px;color:#cbd5e1;font-size:12px">Site by Life of Oil</div>
+  </footer>
+
+  <script>
+    // Лёгкие easter eggs для тех, кто смотрит в консоль
+    console.log("Life of Oil — public site. Для внутренних материалов попробуйте /admin или посмотрите в /recovered/");
+    // Невидимый "карман" — небольшая подсказка для тех, кто изучает исходник
+    // paths: /admin, /recovered/, /records/contract_20190204.pdf
+  </script>
+</body>
+</html>
